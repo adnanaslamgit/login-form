@@ -1,0 +1,204 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial';
+}
+.center {
+  width: 350px;
+  height: 600px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.headtag{
+  color: #ffffff;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items:  center;
+  justify-content:  center;
+  width: 100%;
+}
+#login {
+  background-color: #ff4e08;
+  padding: 10px;
+  width: 330px;
+  border-radius: 4px;
+  height: 580px;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
+}
+.mouth {
+  width: 160px;
+  height: 130px;
+  background: transparent;
+  border-radius: 65%;
+  position: absolute;
+  left: 95px;
+  top: 120px;
+  border-bottom: 5px solid white;
+}
+.eye {
+  z-index: 0;
+  margin-left: 90px;
+  margin-top: 78px;
+  margin-bottom: 0px;
+  width: 150px;
+  height: 150px;
+  background: white;
+  position: absolute;
+  border-radius: 65% 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+.eye > .ball {
+  transition: all 0.3s ease-out;
+  width: 80px;
+  height: 80px;
+  border: 6px solid grey;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.eye.up > .ball {
+  top: 5%;
+  left: 5%;
+}
+.eye.up > .ball > .shine {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.eye.down > .ball {
+  top: 35%;
+  left: 35%;
+}
+.eye.down > .ball > .shine {
+  margin-top: 25px;
+  margin-left: 0px;
+}
+.eye.blink > .shut {
+  animation-fill-mode: forwards;
+  animation: blink 0.4s 1 ease-in;
+  transition: all 0.3s ease-out;
+}
+.shut {
+  background-color: rgba(0, 0, 0, 1);
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  left: -100px;
+  top: -150px;
+  transform: rotate(-45deg);
+  z-index: 9;
+}
+.shine {
+  transition: all 0.3s ease-out;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.shine:after {
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  z-index: 3;
+  transform: translateX(7px) translateY(-18px);
+}
+input[type="text"] {
+  margin-top: 270px;
+  margin-bottom: 30px;
+}
+input[type="text"],
+input[type="password"] {
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: none;
+  background-color: white;
+  font-family: sans-serif;
+  outline: 0;
+  letter-spacing: 0.3px;
+  padding: 20px 20px;
+  color: rgb(146, 146, 146);
+  font-size: 14px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.icon {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: inline-block;
+  padding: 17px 20px 18px 20px;
+  color: white;
+  border: 1px solid white;
+  margin-right: -5px;
+  font-size: 18px;
+}
+::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  color: rgb(146, 146, 146);
+  letter-spacing: 0.3px;
+}
+:-moz-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: rgb(146, 146, 146)
+}
+::-moz-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+:-ms-input-placeholder {
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  color: rgb(146, 146, 146)
+}
+.btns {
+  margin-top: 20px;
+}
+.btns a {
+  margin-right: 13px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+.btn-login{
+    font-size: 15px;
+    outline: 0;
+    padding: 8px 30px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(146, 146, 146);
+}
+@keyframes blink {
+  0% {
+    left: -150px;
+    top: -150px;
+  }
+  50% {
+    left: -66px;
+    top: 20px;
+  }
+}
